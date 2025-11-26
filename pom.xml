@@ -11,6 +11,8 @@
 	<groupId>com.home</groupId>
 	<artifactId>cards</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+    <!-- Set jar as packaging -->
+    <packaging>jar</packaging>
 	<name>cards</name>
 	<description>Cards Microservice</description>
 	<url/>
@@ -101,6 +103,16 @@
 					</excludes>
 				</configuration>
 			</plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <to>
+                        <image>haidarmajd/${project.artifactId}:t1</image>
+                    </to>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 
