@@ -1,13 +1,10 @@
 server:
   port: 9000
 spring:
-  config:
-    import:
-      - "application_prod.yml"
-      - "application_qa.yml"
+  application:
+    name: cards
   profiles:
-    active:
-      - "qa"
+    active: dev
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -20,7 +17,5 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
-    show-sql: true
-
-build:
-  version: 0.0.3
+  config:
+    import: optional:configserver:http://localhost:8888

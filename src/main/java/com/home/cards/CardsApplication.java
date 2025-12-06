@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @OpenAPIDefinition(info = @io.swagger.v3.oas.annotations.info.Info(title = "Cards microservice", description = "Cards microservice REST APIs", version = "1.0"))
 public class CardsApplication implements CommandLineRunner {
 
-    @Value("${build.version}")
+    @Value("${build.version:NotFound}")
     private String buildVersion;
 
     public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class CardsApplication implements CommandLineRunner {
 
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         started();
     }
 

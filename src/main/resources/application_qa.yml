@@ -1,6 +1,0 @@
-spring:
-  jpa:
-    show-sql: false
-
-build:
-  version: 0.0.2
