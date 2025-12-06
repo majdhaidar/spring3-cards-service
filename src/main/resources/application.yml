@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: cards
   profiles:
     active: dev
   config:
