@@ -129,7 +129,7 @@
                 <version>3.5.1</version>
                 <configuration>
                     <to>
-                        <image>haidarmajd/${project.artifactId}:t1</image>
+                        <image>haidarmajd/${project.artifactId}:t2</image>
                     </to>
                 </configuration>
             </plugin>
